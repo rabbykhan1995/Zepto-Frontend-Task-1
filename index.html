@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Document</title>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1 id="headline" class="text-center text-2xl font-bold p-10">
+      Font uploader and group Maker
+    </h1>
+
+    <!-- Form Start -->
+    <form
+      action=""
+      class="shadow-md text-gray-700 lg:w-[50vw] w-[90vw] m-10 border border-gray-200 p-10 justify-self-center"
+    >
+      <label
+        for="file_uploader"
+        class="flex flex-col gap-5 justify-center place-items-center"
+      >
+        <img
+          src="https://img.icons8.com/?size=100&id=47858&format=png&color=000000"
+          alt="Upload Icon"
+          id="image_tag"
+          class="max-w-[10vw]"
+        />
+        <div style="text-align: center">
+          <h3>
+            <span style="font-weight: bold">Click to upload </span>
+            <!-- <span style="font-weight: lighter">or Drag & Drop</span> -->
+          </h3>
+          <h5>Only TTF File Allowed</h5>
+        </div>
+      </label>
+      <input class="hidden" type="file" name="file" id="file_uploader" />
+    </form>
+
+    <script src="script.js"></script>
+    <!-- Form End -->
+
+    <h1 id="file_name"></h1>
+
+    <!-- Here We Are getting the Font from php backend with ajax -->
+
+    <div class="flex flex-col gap-5 p-10">
+      <table
+        class="w-full max-w-3xl mx-auto border border-gray-300 shadow-md rounded-lg"
+      >
+        <caption class="m-6 text-2xl font-bold text-gray-700">
+          Font List
+        </caption>
+
+        <thead
+          class="bg-gray-200 text-gray-600 uppercase text-sm leading-normal"
+        >
+          <tr>
+            <th class="py-3 px-6 text-left">Font Name</th>
+            <th class="py-3 px-6 text-left">Font Preview</th>
+            <th class="py-3 px-6 text-center">Action</th>
+          </tr>
+        </thead>
+
+        <tbody id="font-table-body"></tbody>
+      </table>
+    </div>
+    <!-- Here Showing Fonts are ended -->
+  </body>
+</html>
