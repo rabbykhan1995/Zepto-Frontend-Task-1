@@ -39,7 +39,6 @@
       <input class="hidden" type="file" name="file" id="file_uploader" />
     </form>
 
-    <script src="script.js"></script>
     <!-- Form End -->
 
     <h1 id="file_name"></h1>
@@ -65,8 +64,51 @@
         </thead>
 
         <tbody id="font-table-body"></tbody>
+        <!-- Here Showing Fonts are ended -->
       </table>
+
+      <div class="p-10 flex flex-col place-items-center">
+        <h1 class="text-2xl font-bold text-center">Create Font Group</h1>
+        <h1 class="text-center text-sm">
+          You Have to select at least two font
+        </h1>
+        <!-- From Here The group input Started -->
+        <div class="p-10 mx-10 flex flex-col gap-5" id="add_row_here">
+          <input
+            type="text"
+            name="group"
+            id="group_name_input"
+            class="border border-gray-200 px-5 shadow-md py-2 focus:outline-none w-full"
+            placeholder="group title"
+          />
+        <div class="flex justify-between w-[80vw] px-10 max-w-3xl">
+          <button class="bg-green-200 py-1 px-5" id="add_row_button">
+            Add row
+          </button>
+          <button  class="bg-green-600 py-1 px-5" id="create_group_button">
+            Create Group
+          </button>
+        </div>
+        <!-- Here group creation ended -->
+      </div>
     </div>
-    <!-- Here Showing Fonts are ended -->
+
+    <table class="border border-gray-200 shadow-md uppercase">
+      <h1 class="text-2xl font-bold text-center">Our Font Group</h1>
+      <h3 class="text-center">List of all available font group</h3>
+      <thead class="bg-gray-200  px-5 py-1">
+        <tr class="text-left">
+          <th>Name</th>
+          <th>Fonts</th>
+          <th>Count</th>
+          <th></th>
+        </tr>
+      </thead>
+        <tbody id="group_table_body">
+
+        </tbody> 
+    </table>
+    <script src="script.js"></script>
+    <script src="group.js"></script>
   </body>
 </html>
